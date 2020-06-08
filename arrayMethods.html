@@ -1,0 +1,133 @@
+<html>
+	<body>
+		<h1> Array Methods </h1>
+		<h3>Array of Strings:</h3>
+		<div id="chars"></div> <br>
+	<div> 
+		<button onclick="mapping()">Use Map</button>
+		<button onclick="reducing()">Use Reduce</button>
+		<button onclick="filtering()">Use Filter</button>
+		<button onclick="eachElem()">Use ForEach</button>
+	</div>
+	
+	
+		<div>
+			<input type="hidden" id="hid" value="sorted array is by using Array Methods:">
+			<p id="test1"></p> 
+		</div>
+		<input type="reset" value="reset" onclick="resetPage()" class="reset"> 
+	
+	
+	
+	<style>
+		body{
+			
+			text-align: center;
+			background-size: cover;
+		}
+		h1{
+			font-family: Comic Sans MS;
+		}
+		button{
+			background-color: pink;
+			padding: 15px 32px;
+			text-align: center;
+			font-size: 16px;
+			border: 2px solid red;
+			outline: none;
+			color: white;
+			font-weight: 1000;
+			border-radius: 15px;
+			cursor: pointer;
+		}
+		#numbers{
+			font-family: Times New Roman;
+			font-size: 30px;
+			color: red;
+		}
+		p{
+			font-family: Times New Roman;
+			font-size: 20px;
+			color: blue;
+		}
+		.reset{
+			background-color: black ;
+			padding: 15px 20px;
+			text-align: center;
+			font-size: 10px;
+			border: 2px solid blue;
+			outline: none;
+			color: white;
+			font-weight: 1000;
+			border-radius: 8px;
+			cursor: pointer;
+			
+		}
+	</style>
+	
+	
+	
+		<script>
+			const words = ["abc", "dea"];
+			document.getElementById("chars").innerHTML = words;
+			/* converting array elements to upper case*/
+			
+			function mapping(){
+				const capitalWords = words.map(word => {
+					return word.toUpperCase();
+				});
+				document.getElementById("test1").innerHTML = "Array elements into uppercase: " + capitalWords;
+				
+			}
+			
+			
+			/* Concatinate all the elements in given array */
+			function reducing(){
+				const singleWord = words.reduce((acc, x) => {
+					return acc + x;
+				});
+				document.getElementById("test1").innerHTML = "Elements into a single word: " +singleWord;
+			}
+			
+			
+			/* getting same letters from every element in the array using filter */
+			
+			const str1 = words[0];
+			const str2 = words[1];
+			
+			const sortedArr = [];
+			function filtering(){
+				const sameLetters = words.filter(letter => {
+					for(let i = 0; i < str1.length; i++){
+						for(let j = 0; j < str2.length; j++){
+							if(str1[i] === str2[j]){
+								if(sortedArr.indexOf(str1[i]) === -1){
+									sortedArr.push(str1[i]);
+								}
+							}
+						}
+					}
+			
+				});
+				document.getElementById("test1").innerHTML = "Common letters from array: " + sortedArr;
+				//console.log("common letters: " + sortedArr);
+			}
+			
+			
+			function eachElem(){
+			let total = 0;
+				const elemLength = words.forEach(letter => {
+			
+					total += letter.length;
+				});
+				document.getElementById("test1").innerHTML = "total count of the letters in array: " + total;
+			}
+			
+			
+			function resetPage(){
+			
+			document.getElementById("test1").innerHTML = null;
+		}
+		</script>
+	</body>
+</html>
