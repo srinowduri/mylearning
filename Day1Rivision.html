@@ -1,0 +1,94 @@
+<html>
+	<body>
+		<script>
+		const numbers = [1,4,3,2,3,4,5,6,5,3,2,1,1];
+		
+		// take unique numbers from 'numbers' array
+		const uniqueValues = [];
+		const uniqueNums = numbers.forEach((value) => {
+			if(uniqueValues.indexOf(value) === -1){
+				uniqueValues.push(value);
+			}
+		});
+		console.log("using forEach():");
+		console.log(uniqueValues);
+		
+		// using Set() 
+		let uniqueNumbers = [...new Set(numbers)];
+		console.log(uniqueNumbers);
+		
+		const students = [
+			{ id: 101, name: 'Adam', age: 19, group: 'host' },
+			{ id: 102, name: 'John', age: 20, group: 'leader' },
+			{ id: 103, name: 'William', age: 19, group: 'host' },
+			{ id: 104, name: 'Oliver', age: 18, group: 'leader' }
+		];
+		
+		const relate = students.filter(student => student.name.includes('li'));
+		console.log(relate);
+		
+		const find = students.some(person => person.group === 'host');
+		
+		console.log(find);
+		
+		const search = [];
+		const isLeader = students.map((person) => {
+			if(person.group === 'host'){
+				search.push(person);
+			}
+		});
+		
+		console.table(search);
+		
+		const nestedArray = [[1,2],[3,4],[5,6, [7,8]]];
+
+		const singleArray1 = nestedArray.reduce((acc,x) => [...acc, ...x],[]);
+		
+		console.log(singleArray1);
+		
+		const singleArray2 = [].concat.apply([], nestedArray);
+		
+		console.log(singleArray2);
+		
+		let singleArray3 = nestedArray.flat();
+		console.log(singleArray3);
+		
+		const ageGroup = students.reduce((acc,x) => {
+			acc[x.age] = acc[x.age] + 1 || 1;
+			return acc;
+		},{});
+		
+		console.log(ageGroup);
+		
+		const ageList = [...new Set(students.map(data => data.age))];
+		
+		console.log(ageList);
+		
+		
+		const cities = {
+			Vizag : 'Andhrapradesh',
+			Mumbai : 'Mahrastra',
+			Karnool : 'Andhrapradesh'
+		};
+		
+		let countries = Object.keys(cities).reduce((acc, city) => (
+					acc[cities[city]] = [...acc[cities[city]] || [], city], acc
+					),{});
+		
+		console.table(countries);
+		
+		
+		const celsius = [-15, -5, 0, 10, 16, 20, 24, 32];
+		
+		const fahrenhiet = celsius.map(temp => {
+			return ((9 * temp) / 5) + 32 
+			});
+			
+		console.log(fahrenhiet);
+		
+		const changeStudentInfo = students.map(student => student.id === 104 ? {...student, age: student.age + 1} : student);
+		
+		console.log(changeStudentInfo);
+		</script>
+	</body>
+</html>
