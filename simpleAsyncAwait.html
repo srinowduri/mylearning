@@ -1,0 +1,36 @@
+<html>
+	<body>
+		<script>
+			const numbers = [1,2,3,4,5,5,6,7,3,5,8,9];
+			
+			function samplePromise(){
+				return new Promise((resolve, reject) => {
+					setTimeout(() => {
+						const values = [];
+						let nums = numbers.forEach(x => {
+							if(values.indexOf(x) === -1){
+								values.push(x);
+							}
+						});
+						
+						if(values.length !== 10){
+								resolve("Hello");
+							} else {
+								reject("Good bye");
+							}
+						
+						console.log(values);
+					},1000);
+				})
+			}
+			
+			async function numClac(){
+				let value = await samplePromise();
+				console.log(value);
+				console.log("numbers are: " + numbers);
+			}
+			
+			numClac();
+		</script>
+	</body>
+</html>
