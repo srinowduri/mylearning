@@ -1,0 +1,111 @@
+<html>
+	<body>
+		<h1>Array Methods</h1>
+		
+		
+		<p id="string"></p>
+		
+		<div>
+		<button onclick="eachElement()">forEach</button>
+		<button onclick="reduceElement()">Reduce</button>
+		<button onclick="mapElement()">Map</button>
+		<button onclick="filterElement()">Filter</button>
+		</div>
+		<div>
+			<input type="hidden" id="hid">
+		</div> <br>
+		<input type="reset" value="reset" onclick="resetPage()" class="reset"> 
+		
+		<p id="method"></p>
+		<style>
+			body{
+				text-align: center;
+				background-color: grey;
+			}
+			h1{
+				font-size: 60px;
+				font-weight: 800;
+				color: white;
+			}
+			#string{
+				font-family: Times New Roman;
+				color: white;
+				font-size: 40px;
+			}
+			#method {
+				font-size: 25px;
+				font-family: Comic Sans MS;
+			}
+			button, .reset{
+			background-color: pink;
+			padding: 15px 32px;
+			text-align: center;
+			font-size: 16px;
+			border: 2px solid blue;
+			outline: none;
+			color: black;
+			font-weight: 1000;
+			border-radius: 15px;
+			cursor: pointer;
+		}
+		</style>
+		<script>
+			const strings = ['arielle', 'aryan', 'sreya', 'there'];
+			document.getElementById("string").innerHTML = "Array of strings: " + strings;
+			
+			
+			function eachElement(){
+			const capitalStrings = [];
+				let uppercaseStrings = strings.forEach(string => {
+					capitalStrings.push(string.toUpperCase());
+				});
+				document.getElementById("method").innerHTML = "After capitalized all the elements in the array: " + capitalStrings;
+			}
+			
+			function reduceElement(){
+			
+				const oneWord = strings.reduce((acc, word) =>{
+					return acc + word;
+				}," ");
+			
+				document.getElementById("method").innerHTML = "adding all the elements in the array: " + oneWord;
+			}
+			
+			const str1 = strings[0] + strings[1];
+			const str2 = strings[2] + strings[3];
+			console.log(str1, str2);
+			
+			const sortedArray = [];
+			function filterElement(){
+					const sameLetters = strings.filter(letter => {
+					for(let i = 0; i < str1.length; i++){
+						for(let j = 0; j < str2.length; j++){
+							if(str1[i] === str2[j]){
+								if(sortedArray.indexOf(str1[i]) === -1){
+									sortedArray.push(str1[i]);
+								}
+							}
+						}
+					}
+			});
+			document.getElementById("method").innerHTML = "same letters from  words: "+ sortedArray;
+			}
+			
+			
+			
+			function mapElement(){
+			let count = 0;
+				const elemLength = strings.map(letter => {
+			
+					count += letter.length;
+				});
+				document.getElementById("method").innerHTML = "total count of the letters in array: " + count;
+			}
+				
+			function resetPage(){
+			
+			document.getElementById("method").innerHTML = null;
+		}
+		</script>
+	</body>
+</html>
