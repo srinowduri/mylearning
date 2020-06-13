@@ -1,0 +1,9 @@
+<div *ngIf="student">
+    <h3>{{ student.name | uppercase }}</h3>
+    <div><span>ID: </span>{{ student.id}}</div>
+    <div>
+        <label>Name:
+            <input [(ngModel)]="student.name" placeholder="name"/>
+        </label>
+    </div>
+</div>
