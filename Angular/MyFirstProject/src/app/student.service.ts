@@ -8,7 +8,7 @@ import { Person } from './person';
 export class StudentService {
   constructor() { }
 
-  getStudents(): Person[] {
+  fetchStudents(): Person[] {
     return StudentList;
   }
 }
