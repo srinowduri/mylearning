@@ -1,19 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { Person } from '../person';
-
+import { StudentService } from '../student.service';
 @Component({
   selector: 'app-student',
   templateUrl: './student.component.html',
   styleUrls: ['./student.component.scss']
 })
 export class StudentComponent implements OnInit {
-student: Person = {
-  id: 101,
-  name: "Saranya"
-};
-  constructor() { }
+students: Person[];
+selectedStudent: Person;
 
+  constructor(private studentService: StudentService) { }
+
+  getStudents() {
+    this.students = this.studentService.getStudents();
+  }
   ngOnInit(): void {
+    this.getStudents();
+  }
+  onSelectStudent(student){
+    this.selectedStudent = student;
   }
 
 }
