@@ -13,7 +13,7 @@ selectedStudent: Person;
   constructor(private studentService: StudentService) { }
 
   getStudents() {
-    this.students = this.studentService.getStudents();
+    this.students = this.studentService.fetchStudents();
   }
   ngOnInit(): void {
     this.getStudents();
