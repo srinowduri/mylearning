@@ -1,0 +1,66 @@
+<html>
+	<body>
+		<script>
+		// given input is array or not
+		
+		let isArray = (input) => {
+		//console.log(toString.call(input));
+			 if (toString.call(input) === "[object Array]"){
+				return true;
+			 } else {
+				return false;
+			 }
+		}
+		console.log(isArray('HELLO'));
+		console.log(isArray([1,2,3,4]));
+		
+		
+		console.log(toString.call([1]));
+		
+		//clone or copy of an array using slice() method
+		
+		let cloneArray = (x) => {
+			return x.slice(0);
+		}
+		
+		console.log(cloneArray(['a','b','c']));
+		console.log(cloneArray([1,2,3,4]));
+		
+		//get the first element of an array
+		
+		let firstElem = (array, n) => {
+			if( array === null)
+				return 'hi';
+			 
+			if(n === null)
+				return array[0];
+				
+			if(n < 0)
+			return [];
+			return array.slice(0, n);
+		};
+		
+		console.log(firstElem([1,2,3,4,5]));
+		console.log(firstElem(null,6));
+		console.log(firstElem([], -1));
+		
+		// join all elements into a string
+		
+		myColor = ["Red", "Green", "White", "Black"];
+		
+		console.log(myColor.toString());
+		
+		const string = myColor.reduce((acc, color) => {
+			return acc + color;
+		},"");
+		
+		console.log(string);
+		
+		let arr1 = [ -3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+		
+		const sortedArray = arr1.sort();
+		
+		console.log(sortedArray);
+		</script>
+	</body>
+</html>
