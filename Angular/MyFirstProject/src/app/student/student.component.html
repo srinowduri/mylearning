@@ -1,12 +1,13 @@
 <h2>Student Information</h2>
 <div>
     <ul>
-        <li *ngFor="let student of students" (click)="onSelectStudent(student)">
+        <li *ngFor="let student of students">
+            <a routerLink="/detail/{{student.id}}"></a>
             <span>{{ student.id }}</span> {{ student.name }}
         </li>
     </ul>
 </div>
-<div *ngIf="selectedStudent">
-    <app-student-details [student]="selectedStudent"></app-student-details>
-</div>
+
+   
+
 

@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Add items in an blank array and display the items.</title>
+	</head>
+	<body>
+		<input type="number" id="text" />
+		<button onclick="addElemsToArray()" id="button1">Add</button>
+		<button onclick="displayElemsInArray()">Display</button>
+		<p id="elem"></p>
+		<p id="display"></p>
+		<script>
+			let x ; const arr = [];
+			function addElemsToArray(){
+				let x1 = document.getElementById("text").value;
+				x = parseInt(x1);
+				arr.push(x);
+				
+				//alert("Element: " + x + " Added at index " + arr.indexOf(x));
+				
+			}
+			
+			function displayElemsInArray(){
+				console.log(arr);
+				
+			let elem = "<hr/>";
+				for(let i = 0; i<arr.length; i++){
+					elem += "Element" + i + "=" + arr[i] + "<br/>";
+				}
+			document.getElementById("elem").innerHTML = elem;
+			}
+		</script>
+	</body>
+</html>
