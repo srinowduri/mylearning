@@ -1,0 +1,13 @@
+<h2>Top Rankers</h2>
+<div class="grid grid-pad">
+    
+    <a *ngFor="let student of students" 
+        class="col-1-4" 
+        routerLink="/detail/{{student.id}}">
+        
+        <div class="module hero">
+            <h3>{{ student.name }}</h3>
+        </div>
+        
+    </a>
+</div>
