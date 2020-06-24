@@ -1,22 +1,28 @@
 import { Injectable } from '@angular/core';
-import { StudentList } from './studentList';
 import { Person } from './person';
-import { Observable, of} from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { MessagesService } from './messages.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StudentService {
-  constructor(private messageService: MessagesService) { }
+  private studentsUrl = 'api/StudentList';
 
+  constructor(private http: HttpClient, private messageService: MessagesService) { }
+
+  private log(message: string){
+    this.messageService.add(`StudentService: ${message}`);
+  }
   fetchStudents(): Observable<Person[]> {
     this.messageService.add("Student details");
-    return of(StudentList);
+    return this.http.get<Person[]>(this.studentsUrl);
   }
 
   getStudent(id: number): Observable<Person> {
     this.messageService.add(`Selected student id ${id} and name ${name}`);
-    return of(StudentList.find(student => student.id === id));
+    //return of(StudentList.find(student => student.id === id));
+    return this.http.get<Person>(this.studentsUrl);
   }
 }

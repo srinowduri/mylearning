@@ -1,0 +1,99 @@
+<html>
+	<body>
+		<script>
+		// deleting duplicates from array  in two types
+			const numbers = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6];
+			
+			const sortedArr = [];
+			
+			numbers.forEach(number => {
+				if(sortedArr.indexOf(number) === -1){
+					sortedArr.push(number);
+				}
+			});
+			console.log(sortedArr);
+			
+			const sortedNum = [...new Set(numbers)];
+			console.log(sortedNum);
+			
+			
+			const color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+			
+			
+			function Order(n){
+				const end = ["th","st","nd","rd"];
+				
+				let x = n % 100;
+				
+				return x+ (end[(x-20) % 10] || end[x] || end[0]);
+			}
+			
+			for(let i = 0; i < color.length; i++){
+				let ordinal = i + 1;
+				
+				let output = (`${Order(ordinal)} choice is ${color[i]}.`);
+				
+				console.log(output);
+			}
+		
+		
+		//Find the leap years in a given range of years.
+		
+		function leapYearRange(firstYear, lastYear){
+			const yearRange = [];
+			for(let i = firstYear; i<=lastYear; i++){
+				yearRange.push(i);
+			}
+			
+			//console.log(yearRange);
+			const newArray = [];
+			
+			yearRange.forEach(year => {
+				if(testLeapYear(year)){
+					newArray.push(year);
+				}
+			});
+			
+			return newArray;
+		}
+		
+		function testLeapYear(year){
+			if( (year % 4 === 0 && year % 100 !== 0) || (year % 100 === 0 && year % 400 === 0)){
+				return year;
+			} else{
+				return false;
+			}
+		}
+		console.log(leapYearRange(2000,2012));
+		
+		function addArrValues(array1, array2){
+			// array1 = [1,0,2,3,4];
+			 //array2 = [3,5,6,7,8,13];
+		
+			const sumValues = [];
+		
+			let counter = 0, i = 0;
+		
+			while( counter < array1.length && counter < array2.length){
+				sumValues.push(array1[counter] + array2[counter]);
+				counter++;
+			}
+		
+			if( counter === array1.length){
+				for(i = counter; i < array2.length; i++){
+					sumValues.push(array2[i]);
+				}
+			} else {
+				for(i = counter; i < array1.length; i++){
+					sumValues.push(array1[i]);
+				}
+			}
+			return sumValues;
+		}
+		
+		console.log(addArrValues([1,0,2,3,4], [3,5,6,7,8,13]));
+		
+		
+		</script>
+	</body>
+</html>
