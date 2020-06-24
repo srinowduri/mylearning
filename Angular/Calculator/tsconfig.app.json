@@ -6,8 +6,7 @@
   },
   "files": [
     "src/main.ts",
-    "src/polyfills.ts",
-    "node_modules/angular-in-memory-web-api/in-memory-web-api.module.d.ts"
+    "src/polyfills.ts"
   ],
   "include": [
     "src/**/*.d.ts"
