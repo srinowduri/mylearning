@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Operator } from '../operator';
 
 @Component({
   selector: 'app-calculator',
@@ -13,17 +12,4 @@ export class CalculatorComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onOperator(operator: Operator){
-
-  }
-  onEvaluate(){
-
-  }
-
-  reset(){
-
-  }
-  onClickNumber(character: string){
-
-  }
 }
