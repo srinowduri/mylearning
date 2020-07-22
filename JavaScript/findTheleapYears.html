@@ -1,0 +1,31 @@
+<html>
+	<body>
+		<script>
+			function leapYearRange(startYear, endYear){
+				const yearRange = [];
+				for(let i = startYear; i <= endYear; i++){
+					yearRange.push(i);
+				}
+				
+				const newYearArray = [];
+				
+				yearRange.forEach(year => {
+					if(testLeapYear(year)){
+						newYearArray.push(year);
+					}
+				});
+				return newYearArray;
+			}
+			
+			function testLeapYear(year){
+				if((year % 4 === 0 && year % 100 !== 0) || (year % 100 === 0 && year % 400 === 0)){
+					return year;
+				} else{
+					return false;
+				}
+			}
+			
+			console.log(leapYearRange(2000, 2012));
+		</script>
+	</body>
+</html>

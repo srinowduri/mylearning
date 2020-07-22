@@ -1,0 +1,26 @@
+<html>
+<body>
+<script>
+	const numbers = [];
+	for(let j = 0; j < 100; j++){
+		if((j + 1) != 30){
+			numbers.push(j+1);
+		}
+	}
+	console.log(numbers);
+	
+	function findMissingNumber(numbers, n){
+	let sum = 0;
+		for(let i = 0; i < numbers.length; i++){
+			sum = sum + numbers[i];
+		}
+		
+		let expectedSum = (n *(n + 1)) / 2;
+		let missingNumber = expectedSum - sum;
+		return missingNumber;
+	}
+	let missedNumber = findMissingNumber(numbers, 100);
+	console.log(missedNumber);
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<h2>First Family Tree</h2>
+<div>
+   <a *ngFor="let member of members" (click)="selectMember(member)">
+            {{ member.name }} <span>{{ member.age }}</span>
+    </a>
+</div>
+
+<app-family1-details [member]="selectedMember"></app-family1-details>

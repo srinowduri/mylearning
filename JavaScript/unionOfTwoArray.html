@@ -1,0 +1,21 @@
+<html>
+	<body>
+		<script>
+			function union(array1, array2){
+				allValues = [];
+				for(let i = 0; i < array1.length; i++){
+					allValues.push(array1[i]);
+				}
+				for(let j = 0; j < array2.length; j++){
+					allValues.push(array2[j]);
+				}
+				
+				const numbers = [...new Set(allValues)];
+				const unionNumbers = numbers.sort((a,b) => a - b);
+				return unionNumbers;
+			}
+			console.log(union([1, 2, 3], [100, 2, 1, 10]));
+			
+		</script>
+	</body>
+</html>

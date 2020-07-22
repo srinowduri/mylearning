@@ -1,0 +1,20 @@
+<html>
+	<body>
+		<script>
+			function commonElements(x, y){
+				const finalArray = [];
+				for(let i = 0; i<x.length; i++){
+					for(let j = 0; j<y.length; j++){
+						
+						if(x[i] === y[j]){
+						finalArray.push(x[i]);
+						}
+					}
+				}
+				return finalArray;
+			}
+			const result = commonElements([1,2,3], [4,3,2]);
+			console.log(result);
+		</script>
+	</body>
+</html>

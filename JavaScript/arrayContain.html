@@ -1,0 +1,18 @@
+<html>
+	<body>
+		<script>
+			const numbers = [2,5,7,8];
+			
+			function arrContain(numbers, element){
+				for(let i = 0; i < numbers.length; i++){
+					if(numbers[i] === element){
+						return true;
+					} 
+				}
+				return false;
+			}
+			const num = arrContain(numbers, 5);
+			console.log(num);
+		</script>
+	</body>
+</html>

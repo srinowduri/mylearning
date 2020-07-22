@@ -11,7 +11,7 @@ export class StudentComponent implements OnInit {
 students: Person[];
 selectedStudent: Person;
 
-  constructor(private studentService: StudentService, private messageService: MessagesService) { }
+  constructor(private studentService: StudentService) { }
 
   getStudents() {
     this.studentService.fetchStudents()
