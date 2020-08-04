@@ -3,7 +3,7 @@
 <script>
 	const numbers = [];
 	for(let j = 0; j < 100; j++){
-		if((j + 1) != 30){
+		if((j + 1) != 5){
 			numbers.push(j+1);
 		}
 	}
@@ -19,7 +19,7 @@
 		let missingNumber = expectedSum - sum;
 		return missingNumber;
 	}
-	let missedNumber = findMissingNumber(numbers, 100);
+	let missedNumber = findMissingNumber(numbers, 20);
 	console.log(missedNumber);
 </script>
 </body>

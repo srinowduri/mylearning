@@ -1,0 +1,46 @@
+.num1, .num2{
+    margin: 8px;
+    max-width: 70px;
+}
+#result{
+    max-width: 50px;
+}
+button{
+    margin: 20px;
+    width: 100px;
+}
+.mul{
+    padding: 10px 20px 10px 20px;
+    border-radius: 8px;
+    margin-left: -2px;
+    background-color: rgb(69, 157, 216);
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: white;
+}
+.mul:hover{
+    background-color: rgb(200, 142, 224);
+    color: black;
+}
+.reset{
+    padding: 10px 15px 10px 15px;
+    border-radius: 8px;
+    margin-left: 80px;
+    background-color: chocolate;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: white;
+    
+}
+.reset:hover{
+    background-color: rgb(148, 240, 148);
+    color: black;
+}
+.ans{
+    font-size: 20px;
+    margin-left: 80px;
+}

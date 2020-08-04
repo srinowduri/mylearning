@@ -12,6 +12,8 @@ export class ShoppingListService {
   ];
 
   ingredientsAdded = new Subject<Ingredient[]>();
+
+  startedEditing = new Subject<number>();
   constructor() { }
 
   getIngredients(){
