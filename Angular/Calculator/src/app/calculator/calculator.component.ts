@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calculator.component.scss']
 })
 export class CalculatorComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  
+  
+
+  
+
+  
 }

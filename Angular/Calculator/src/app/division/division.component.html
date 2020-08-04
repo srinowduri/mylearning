@@ -1,0 +1,23 @@
+ <div class="container"> 
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+            <br>
+            <form>
+                <h4>
+                    <label>Number 1:</label>
+                    <input type="number" maxlength="10" [(ngModel)]="number1" 
+                            name="num1"   class="num1"> <br>
+                    <label>Number 2:</label>
+                    <input type="number" max-length="10" [(ngModel)]="number2" 
+                            name="num2" class="num2">
+                    <label class="ans">Result:</label>
+                    <input size="10" id="result" value="" name="value" [(ngModel)]="value" readonly/>
+                </h4>
+                <h4>
+                    <button (click)="onDivide()" class="div"> Divide </button>
+                    <input type="reset" class="reset" value="Reset">
+                </h4>
+            </form>
+        </div>
+    </div>
+</div>

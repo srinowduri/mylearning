@@ -1,0 +1,26 @@
+<html>
+	<body>
+		<script>
+			/*function removeElemFromArray(array, n){
+				const index = array.indexOf(n);
+				//console.log(index);
+					if (index > -1) {
+						array.splice(index, 1);
+					}
+				return array;
+			}
+			console.log(removeElemFromArray([2,3,4,5], 4)); */
+			
+			function removeElement(array1, n){
+				for(let i = 0; i <= array1.length; i++){
+					if(array1[i] === n){
+						array1.splice(i, 1);
+						//delete array1[i];
+					}
+				}
+				return array1;
+			}
+			console.log(removeElement([2,3,4,5], 4));
+		</script>
+	</body>
+</html>
