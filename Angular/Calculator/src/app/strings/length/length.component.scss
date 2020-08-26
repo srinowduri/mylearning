@@ -1,0 +1,64 @@
+.container{
+    border: 2px solid black;
+    float: right;
+    border-radius: 10px;
+    border-collapse: collapse;
+    width: 25%;
+    height: 350px;
+    margin-right: 40%;
+    font-size: 18px;
+    position: sticky;
+    padding: 20px;
+}
+h1{
+    text-align: center;
+    margin-right: 20%;
+}
+button{
+    margin: 10px;
+}
+.head{
+    font-size: large;
+    float: left;
+}
+.text{
+    font-size: 20px;
+    float: left;
+}
+p{
+    font-size:20px;
+    color: mediumblue;
+}
+.find{
+    padding: 10px;
+    border-radius: 8px;
+    outline: none;
+    background-color: royalblue;
+    font-size: 20px;
+    color: white;
+}
+#result{
+    font-size: 20px;
+    float: left;
+    height: 40%;
+    width: 10%;
+}
+.ans{
+    font-size: large;
+    float: left; 
+}
+.reset{
+    padding: 10px 20px 10px 20px;
+    border-radius: 8px;
+    margin-left: -40%;
+    font-size: 15px;
+    font-weight: bold;
+    outline: none;
+    margin-top: 20px;
+    background-color: orangered;
+    color: white;
+}
+.reset:active{
+    background-color: orange;
+    color: black;
+}

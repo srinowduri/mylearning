@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AdditionComponent } from './addition/addition.component';
-import { SubstractionComponent } from './substraction/substraction.component';
-import { MultiplicationComponent } from './multiplication/multiplication.component';
-import { DivisionComponent } from './division/division.component';
+import { OperationsComponent } from './operations/operations.component';
+import { StringsComponent } from './strings/strings.component';
+import { ArraysComponent } from './arrays/arrays.component';
+// import { RxjsComponent } from './rxjs/rxjs.component';
+import { ObjectsComponent } from './objects/objects.component';
 
 
 const routes: Routes = [
-  { path:'add', component: AdditionComponent },
-  { path:'sub', component: SubstractionComponent },
-  { path:'mul', component: MultiplicationComponent},
-  { path:'div', component:DivisionComponent},
-  { path:'', redirectTo:'/add', pathMatch:'full'}
+  { path:'optn', component: OperationsComponent },
+  { path:'str', component: StringsComponent },
+  { path:'arr', component: ArraysComponent },
+  { path:'obj', component: ObjectsComponent },
+
+  // { path:'rxjs', component: RxjsComponent },
+  { path:'', redirectTo:'/optn', pathMatch:'full'}
 ];
 
 @NgModule({

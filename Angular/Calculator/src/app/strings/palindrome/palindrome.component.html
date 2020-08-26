@@ -1,0 +1,12 @@
+<div class="container">
+    <form>
+        <label>Enter your text:</label>
+        <input type="text" name="text" [(ngModel)]="text"><br><br>
+
+        <button (click)="onSubmit()"> Check </button><br><br>
+
+        <a>{{ isText }} {{ message }}</a>
+        <button type="reset" class="reset" (click)="reset()">Reset</button>
+    </form>
+
+</div>

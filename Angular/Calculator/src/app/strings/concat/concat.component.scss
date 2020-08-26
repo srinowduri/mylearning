@@ -1,0 +1,94 @@
+.container{
+    border: 2px solid black;
+    float: right;
+    border-radius: 10px;
+    border-collapse: collapse;
+    width: 30%;
+    height: 400px;
+    margin-right: 38%;
+    font-size: 18px;
+    position: sticky;
+    padding: 20px;
+}
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-right: 21%;
+}
+button{
+    margin: 10px;
+}
+.text1 {
+    margin: 8px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+.text2{
+    margin: 8px;
+    margin-top: 15%;
+    margin-left: -61%;
+    float: left;
+    font-size: 25px;
+}
+
+.label1{
+    float: left;
+    margin-left: 20px;
+    margin-top: 7%;
+}
+
+.label2{
+    float: left;
+    margin-left: -75%;
+    margin-top: 15%;
+}
+#result{
+    float: left;
+    margin-left: 18%;
+    margin-top: 100px;
+    font-size: 20px;
+    height: 2cm;
+    width: 8cm;
+}
+.ans{
+    float: left;
+    font-size: 20px;
+    margin-left: -75%;
+    margin-top: 150px;
+}
+button{
+    margin: 20px;
+    width: 100px;
+}
+.btn-primary{
+    padding: 10px 20px 10px 20px;
+    border-radius: 8px;
+    margin-left: -50%;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    margin-top: 200px;
+    float: left;
+}
+// .concat:hover{
+//     background-color: rgb(200, 142, 224);
+//     color: black;
+// }
+.reset{
+    padding: 10px 20px 10px 20px;
+    border-radius: 8px;
+    margin-left: -40%;
+    font-size: 15px;
+    font-weight: bold;
+    outline: none;
+    margin-top: 148px;
+    background-color: orangered;
+    color: white;
+}
+.reset:active{
+    background-color: orange;
+    color: black;
+}

@@ -1,0 +1,16 @@
+<div class="container">
+    <form>
+        <label>Enter your text:</label>
+        <input type="text" name="text" [(ngModel)]="text"><br><br>
+
+        <label>Number</label>
+        <input type="number" name="num" [(ngModel)]="number"><br><br>
+
+        <button (click)="onSubmit()" class="add"> sub string </button><br><br>
+
+        <label class="ans">Result:</label>
+        <input id="result" value="" name="value" [(ngModel)]="value" readonly/> <br><br>
+
+        <input type="reset" class="reset" value="Reset">
+    </form>
+</div>

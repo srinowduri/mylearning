@@ -1,0 +1,12 @@
+<h1>Length of the Text</h1>
+<div class="container">
+    <form>
+        <label class="head">Enter your text:</label>
+        <input type="text" name="text" [(ngModel)]="text" class="text"><br><br>
+        <button (click)="onSubmit()" class="find"> Length </button><br><br>
+        <label class="ans">Result:</label>
+        <input id="result" value="" name="value" [(ngModel)]="value" readonly/> <br><br>
+        <!-- <input type="reset" class="reset" value="Reset"> -->
+        <button (click)="reset()" class="reset">Reset</button>
+    </form>
+</div>

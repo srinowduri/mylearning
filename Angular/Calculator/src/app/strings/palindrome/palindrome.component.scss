@@ -1,0 +1,25 @@
+.container{
+    border: 2px solid black;
+    float: right;
+    border-radius: 10px;
+    border-collapse: collapse;
+    width: 20%;
+    height: 400px;
+    margin-right: 40%;
+    font-size: 18px;
+    position: sticky;
+    padding: 30px;
+}
+h2{
+    text-align: center;
+    margin-right: 10%;
+}
+button{
+    margin: 10px;
+    position: fixed;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

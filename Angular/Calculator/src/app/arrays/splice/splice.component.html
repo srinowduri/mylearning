@@ -1,0 +1,28 @@
+<div class="container"> 
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+            <br>
+            <form>
+                <h4>
+                    <label>Enter comma ',' separated words:</label>
+                    <input type="text" [(ngModel)]="text1" name="text"> <br>
+                    <label>Enter any word to ad or delete to the given above words:</label>
+                    <input type="text" [(ngModel)]="text2" name="text"> <br><br>
+                    <label>Enter position:</label>
+                    <input type="number" [(ngModel)]="number" name="num"> <br>
+                    <label>Select 0 or 1: <span>0 is for 'add' and 1 is for 'delete' or 'replace'</span></label>
+                    <select name="value" [(ngModel)]="value">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                    </select><br><br>
+                    <label>Result:</label>
+                    <a>{{ resultString }}</a>
+                </h4>
+                <h4>
+                    <button (click)="onSubmit()">Splice</button>
+                    <button type="reset" class="reset" (click)="reset()">Reset</button>
+                </h4>
+            </form>
+        </div>
+    </div>
+</div>
