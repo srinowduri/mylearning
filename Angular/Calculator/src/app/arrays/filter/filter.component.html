@@ -1,0 +1,24 @@
+<div class="container"> 
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+            <br>
+            <form>
+                <h4>
+                    <label>Enter the comma ',' separated text:</label>
+                    <input type="text" [(ngModel)]="text" name="text"> <br>
+                    <label>Enter any number:</label>
+                    <input type="number" [(ngModel)]="number" name="num"> <br>
+                    
+                    <label>Result:</label>
+                    
+                    <a> {{ finalText }} </a>
+                        <a *ngIf="resultArray.length === 0"> {{ message }}</a>
+                </h4>
+                <h4>
+                   <button (click)="onSubmit()">Filter</button>
+                   <button (click)="reset()">Reset</button>
+                </h4>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<h2>Reverse of the your text</h2>
+<div class="container">
+    <form>
+        <label class="head">Enter your text:</label>
+        <input class="text" type="text" name="text" [(ngModel)]="text"><br><br>
+
+        <button (click)="onSubmit()" class="reverse"> Reverse </button><br><br>
+
+        <label class="ans">Result:</label>
+        <input id="result" value="" name="value" [(ngModel)]="value" readonly/> <br><br>
+
+        <button type="reset" class="reset">Reset</button>
+    </form>
+</div>

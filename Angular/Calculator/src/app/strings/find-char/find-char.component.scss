@@ -1,0 +1,99 @@
+.container{
+    border: 2px solid black;
+    float: right;
+    border-radius: 10px;
+    border-collapse: collapse;
+    width: 30%;
+    height: 400px;
+    margin-right: 38%;
+    font-size: 18px;
+    position: sticky;
+    padding: 20px;
+}
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-right: 21%;
+}
+
+.text1 {
+    margin: 8px;
+    float: left;
+    margin-top: 60px;
+    margin-left: -56%;
+    font-size: 15px;
+}
+.text2{
+    margin: 8px;
+    float: left;
+    margin-top: 80px;
+    margin-left: -56%;
+    font-size: 15px;
+}
+
+.label1{
+    float: left;
+    margin-left: 10px;
+    margin-top: 7%;
+}
+
+.label2{
+    float: left;
+    margin-left: -56%;
+    margin-top: 20%;
+}
+button{
+    margin: 20px;
+    width: 100px;
+}
+.btn-primary{
+    padding: 10px 20px 10px 20px;
+    border-radius: 8px;
+    margin-left: 20%;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    margin-top: 180px;
+    float: left;
+}
+
+.reset{
+    padding: 10px 20px 10px 20px;
+    border-radius: 8px;
+    margin-right: 40%;
+    font-size: 15px;
+    font-weight: bold;
+    outline: none;
+    margin-top: -12%;
+    background-color: orangered;
+    color: white;
+    float: right;
+}
+.reset:active{
+    background-color: orange;
+    color: black;
+}
+
+.msg{
+    float: left;
+    margin-top: -200px;
+    color: red;
+    font-size: 20px;
+}
+.pos{
+    margin-top: 50px;
+    float: left;
+    margin-left: 2%;
+}
+.char{
+    float: left;
+    margin-top: 50px;
+    margin-left: 45%;
+    margin: 5px;
+    text-decoration-line: none;
+}
+.count{
+    color: blue;
+    margin-top: 20%;
+}

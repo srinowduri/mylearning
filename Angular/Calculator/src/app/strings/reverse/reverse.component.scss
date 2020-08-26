@@ -1,0 +1,61 @@
+.container{
+    border: 2px solid black;
+    float: right;
+    border-radius: 10px;
+    border-collapse: collapse;
+    width: 20%;
+    height: 400px;
+    margin-right: 42%;
+    font-size: 18px;
+    position: sticky;
+    padding: 20px;
+}
+h2{
+    text-align: center;
+    margin-right: 18%;
+}
+button{
+    margin: 10px;
+}
+.head{
+     font-size: larger;  
+}
+.text{
+    width: 90%;
+}
+#result{
+    float: left;
+    margin-left: 25%;
+    font-size: 20px;
+    width: 6cm;
+    margin-top: -30px;
+}
+.ans{
+    float: left;
+    font-size: 20px;
+    margin-top: 10%;
+}
+.reverse{
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    padding: 15px;
+    background-color: cornflowerblue;
+    color: white;
+}
+.reset{
+    padding: 10px 20px 10px 20px;
+    border-radius: 8px;
+    margin-left: -5%;
+    font-size: 15px;
+    font-weight: bold;
+    outline: none;
+    margin-top: 50px;
+    background-color: orangered;
+    color: white;
+}
+.reset:active{
+    background-color: orange;
+    color: black;
+}

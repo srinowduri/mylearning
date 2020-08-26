@@ -1,0 +1,20 @@
+<div class="container"> 
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+            <br>
+            <form>
+                <h4>
+                    <label>Enter comma ',' separated Numbers:</label>
+                    <input type="text" [(ngModel)]="number" name="num"> <br>
+                    
+                    <label>Result:</label>
+                    <input  id="result" value="" name="result" [(ngModel)]="result" readonly/>
+                </h4>
+                <h4>
+                   <button (click)="onSubmit()">Reduce</button>
+                   <button (click)="reset()">Reset</button>
+                </h4>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<h2>Strings</h2>
+<div class="row">
+    <div class="col-3 menu">
+        <div class="operation">
+            <a (click)="onLength()">String length</a><br><br>
+            <a (click)="onReverse()">Reverse of String</a><br><br>
+            <a (click)="onConcat()">String Concat</a><br><br>
+            <a (click)="onFind()">Find Character</a><br><br>
+            <a (click)="onSubString()">Sub String</a><br><br>
+            <a (click)="palindrome()">Palindrome</a><br><br>
+        </div>
+        <app-length  *ngIf="(showOperation === 'len')"></app-length>
+        <app-reverse *ngIf="(showOperation === 'reverse')"></app-reverse>
+        <app-palindrome *ngIf="(showOperation === 'palin')"></app-palindrome>
+        <app-sub-string *ngIf="(showOperation === 'sub')"></app-sub-string>
+        <app-concat *ngIf="(showOperation === 'concat')"></app-concat>
+        <app-find-char *ngIf="(showOperation === 'char')"></app-find-char>
+    </div>
+</div>

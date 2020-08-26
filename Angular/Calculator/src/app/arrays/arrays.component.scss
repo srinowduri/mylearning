@@ -1,0 +1,51 @@
+h2{
+    margin: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    float: left;
+}
+
+a{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: x-large;
+    background-color: yellowgreen;
+    outline: none;
+    border: blue;
+    text-align: left;
+}
+
+.arr{
+    float: left;
+    margin-top: 100px;
+    margin-left: -250px;
+    text-align: left;
+}
+
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    padding: 10px;
+    border-radius: 8px;
+    font-size: x-large;
+    background-color: yellowgreen;
+    color: black;
+    text-align: left;
+    cursor: pointer;
+    text-decoration-line: none;
+}
+.menu a:hover {
+    background-color: #342ca1;
+    cursor: pointer;
+    color: white;
+}
+h3{
+    text-align: center;
+    margin-right: 18%;
+}

@@ -1,0 +1,17 @@
+<h2>Add Two Strings</h2>
+<div class="container">
+    <form>
+        <label class="label1"> Text 1: </label>
+        <input type="text" class="text1" name="text" [(ngModel)]="text1"><br>
+        <label class="label2">Text 2:</label>
+        <input type="text" class="text2" name="text" [(ngModel)]="text2">
+
+        <label class="ans">Result:</label>
+        <input id="result" value="" type="text" name="value" [(ngModel)]="value" readonly/>
+        <br><br>
+
+        <button (click)="onSubmit()" class="btn btn-primary">Concat</button><br><br>
+
+        <input type="reset" class="reset" value="Reset">
+    </form>
+</div>

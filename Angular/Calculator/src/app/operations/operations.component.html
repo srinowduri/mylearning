@@ -1,0 +1,15 @@
+<h2 style="text-align: center;">Numbers</h2>
+<div class="row">
+    <div class="col-3 menu">
+        <div class="math">
+            <a class="add" (click)="onAdd()"> Addition </a><br><br>
+            <a class="sub" (click)="onSubtrac()"> Subtraction </a><br><br>
+            <a class="mul" (click)="onMulti()"> Multiplication </a><br><br>
+            <a class="div" (click)="onDivn()"> Division </a><br><br>
+        </div>
+        <app-addition *ngIf="(showOperation === 'add')"></app-addition> 
+        <app-substraction *ngIf="(showOperation === 'sub')"></app-substraction>
+        <app-multiplication *ngIf="(showOperation === 'mul')"></app-multiplication>
+        <app-division *ngIf="(showOperation === 'div')"></app-division>
+    </div>
+</div>

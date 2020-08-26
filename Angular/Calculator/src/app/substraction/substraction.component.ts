@@ -1,18 +1,16 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-substraction',
   templateUrl: './substraction.component.html',
   styleUrls: ['./substraction.component.scss']
 })
-export class SubstractionComponent implements OnInit {
+export class SubstractionComponent {
   value;
   number1: number;
   number2: number;
-  constructor() { }
 
-  ngOnInit(): void {
-  }
+  constructor() { }
 
   onSubstract() {
     const sub = this.number1 - this.number2;

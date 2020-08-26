@@ -1,0 +1,17 @@
+<h2 style="text-align: center;">Array Methods</h2>
+<div class="row">
+    <div class="col-3 menu">
+        <div class="arr">
+            <a class="for" (click)="onForEach()"> For-Each </a><br><br>
+            <a class="filter" (click)="onFilter()"> Filter </a><br><br>
+            <a class="map" (click)="onMap()"> Map </a><br><br>
+            <a class="redc" (click)="onReduce()"> Reduce </a><br><br>
+            <a class="spl" (click)="onSplice()"> Splice </a><br><br>
+        </div>
+        <app-for-each  *ngIf="(showMethod === 'each')"></app-for-each>
+        <app-filter  *ngIf="(showMethod === 'filter')"></app-filter>
+        <app-map  *ngIf="(showMethod === 'map')"></app-map>
+        <app-reduce  *ngIf="(showMethod === 'reduce')"></app-reduce>
+        <app-splice  *ngIf="(showMethod === 'splice')"></app-splice>
+    </div>
+</div>

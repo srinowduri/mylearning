@@ -1,0 +1,23 @@
+<h2>Find given Letter</h2>
+<div class="container">
+    <form>
+        <label class="label1"> Enter a text with ',' separated value:</label>
+        <input type="text" class="text1" name="text" [(ngModel)]="text">
+        
+        <label class="label2">Enter a letter:</label><br><br>
+        <input type="text" class="text2" name="text" [(ngModel)]="char"><br>
+
+        <a class="msg">{{ message }}</a>
+        <div *ngIf="charPosition.length !== 0">
+            <a class="count"> Total Count: {{ count }}</a>
+            <a class="pos">Positios of the given letter: </a>
+            <a class="char" *ngFor="let char of charPosition">
+                {{ char }}
+            </a>
+        </div><br><br> 
+
+        <button (click)="onSubmit()" class="btn btn-primary">Find</button>
+        <button class="reset" type="reset" (click)="reset()">Reset</button>
+
+    </form>
+</div>
