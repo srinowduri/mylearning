@@ -1,0 +1,36 @@
+<h1 style="text-align: center;">Student Form</h1>
+<app-add-student *ngIf="showAddForm" (studentAdded)="onStudentAdd($event)"></app-add-student>
+<app-edit-student [student]="student" *ngIf="showEditForm" (editedStudent)="onStudentEdit($event)"></app-edit-student>
+<table class="studentTable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Level</th>
+            <th>Email-Id</th>
+            <th>Phone No.</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students$ | async">
+            <td>{{student.name}}</td>
+            <td>{{student.level}}</td>
+            <td>{{student.emailId}}</td>
+            <td>{{student.phoneNum}}</td>
+            <td>
+                <button class="btn btn-primary" (click)="onEditStudent(student)"> Edit </button> / 
+                <button class="btn btn-danger" (click)="onRemoveStudent(student.id)"> Remove </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button class="btn btn-success" (click)="onAddStudent()">Add Student</button>
+<div>
+    <div class="successMessage" *ngIf="successMessage">
+        {{ successMessage }}
+    </div>
+    
+    <div class="errorMessage" *ngIf="errorMessage">
+        {{ errorMessage }}
+    </div>
+</div>

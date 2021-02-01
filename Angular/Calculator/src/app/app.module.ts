@@ -29,6 +29,9 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 import { RxjsMapComponent } from './rxjs/rxjs-map/rxjs-map.component';
 import { RxjsConcatComponent } from './rxjs/rxjs-concat/rxjs-concat.component';
 import { ObjectsComponent } from './objects/objects.component';
+import { AddPersonComponent } from './objects/add-person/add-person.component';
+import { ObjectFilterComponent } from './objects/object-filter/object-filter.component';
+import { DisplayPersonsComponent } from './objects/display-persons/display-persons.component';
 
 
 
@@ -59,7 +62,10 @@ import { ObjectsComponent } from './objects/objects.component';
     RxjsComponent,
     RxjsMapComponent,
     RxjsConcatComponent,
-    ObjectsComponent
+    ObjectsComponent,
+    AddPersonComponent,
+    ObjectFilterComponent,
+    DisplayPersonsComponent
   ],
   imports: [
     BrowserModule,

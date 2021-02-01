@@ -1,0 +1,17 @@
+<h5>{{ message }}</h5>
+<label>Filter</label>
+<select name="value" [(ngModel)]="value" (change)="selectValue($event)" aria-placeholder="Name">
+    <option value="name">Name</option>
+    <option value="age">Age</option>
+</select>
+<div *ngIf="selectedValue === 'name'">
+    <div class="container">
+        <form>
+            <div>
+                <label>Enter letter: </label>
+                <input type="text" class="form-control" value="letter" name="letter" [(ngModel)]="letter">
+            </div>
+            <button (click)="filter()" class="btn btn-primary">filter</button> 
+        </form> 
+    </div>
+</div>
