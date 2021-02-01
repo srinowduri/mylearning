@@ -1,0 +1,23 @@
+<div class="container">
+    <form [formGroup]="personDetailForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>First Name:</label>
+            <input type="text" class="form-control"  formControlName="firstName">
+        </div>
+        <div class="form-group">
+            <label>Last Name:</label>
+            <input type="text" class="form-control"  formControlName="lastName">
+        </div>
+        <div class="form-group">
+            <label>Birth-Year:</label>
+            <input type="number" id="year" class="form-control" formControlName="birthYear">
+        </div>
+        <div class="form-group">
+            <label>Age:</label>
+            <input type="number" id="age" class="form-control" formControlName="age">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success" type="submit">Add</button>
+        </div>
+    </form>
+</div>

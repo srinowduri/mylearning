@@ -1,1 +1,17 @@
-<p>objects works!</p>
+<h2 style="text-align: center;">Objects</h2>
+<div class="row"> 
+    <app-display-persons [persons]='persons'></app-display-persons>
+    <div class="col-1 menu">
+        <div class="arr">
+            <a class="for" (click)="onForEach()"> For-Each </a><br><br>
+            <a class="filter" (click)="onFilter()"> Filter </a><br><br>
+            <a class="map" (click)="onMap()"> Map </a><br><br>
+            <a class="redc" (click)="onReduce()"> Reduce </a><br><br>
+        </div>
+        <!-- <app-for-each  *ngIf="(showMethod === 'each')"></app-for-each> -->
+        <app-object-filter  *ngIf="(showMethod === 'filter')"></app-object-filter>
+        <!-- <app-map  *ngIf="(showMethod === 'map')"></app-map> -->
+        <!-- <app-reduce  *ngIf="(showMethod === 'reduce')"></app-reduce> -->
+    </div>
+</div>
+

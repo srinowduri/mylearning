@@ -1,0 +1,29 @@
+button{
+    margin: 5px;
+}
+.container{
+    border: 2px solid black;
+    float: right;
+    border-radius: 10px;
+    border-collapse: collapse;
+    width: 20%;
+    height: 300px;
+    margin-right: 20%;
+    font-size: 18px;
+    position: sticky;
+    padding: 30px 0 0 20px;
+}
+label{
+    float: left;
+    font-size: medium;
+}
+
+input{
+    width: 60%;
+}
+#age{
+    width: 25%;
+}
+#year{
+    width: 40%;
+}
