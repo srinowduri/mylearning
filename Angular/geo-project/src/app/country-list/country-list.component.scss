@@ -1,0 +1,29 @@
+.countryTable{
+    text-align: left;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-left: 5%; 
+    margin-right:auto;
+    width: 50%;
+    height: 40%;
+    margin-top: 60px;
+    background-color: lavender;
+}
+
+table,td, th{
+    border: 2px solid navy;
+    height: 50px;
+}
+td{
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    font-size: medium;
+}
+th{
+    text-align: center;
+    color: navy;
+    font-size: large;
+    font-weight: bold;
+    background-color: lightblue;
+}
