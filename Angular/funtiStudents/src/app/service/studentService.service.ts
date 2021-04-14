@@ -12,13 +12,13 @@ export class StudentService {
     const headers = {
       "content-type": "application/json"
     }
-    const url = "http://localhost:2000/api/students"
+    const url = "http://localhost:4000/api/students"
     // console.log(JSON.stringify(student));
     return this.http.post(url, student, {headers});
   }
 
   getStudents(){
-    const url = "http://localhost:2000/api/students"
+    const url = "http://localhost:4000/api/students"
     return this.http.get<Student[]>(url, {});
   }
 
@@ -26,13 +26,13 @@ export class StudentService {
     const headers = {
       "content-type": "application/json"
     }
-    const url = "http://localhost:2000/api/students"
+    const url = "http://localhost:4000/api/students"
     // console.log(JSON.stringify(student.id));
     return this.http.put(url, student, {headers}); 
   }
 
   deleteStudent(id: string) {
-    const url = "http://localhost:2000/api/students/" + id;
+    const url = "http://localhost:4000/api/students/" + id;
     return this.http.delete(url, {responseType: "text"});
   }
 }

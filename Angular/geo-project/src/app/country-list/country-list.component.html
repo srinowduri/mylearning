@@ -1,0 +1,18 @@
+<table class="countryTable">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Population</td>
+            <td>States</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let country of countries | async">
+            <td>{{country.ctr_name}}</td>
+            <td>{{country.ctr_pPl}}</td>
+            <td *ngFor="let state of country.ctr_states">
+                {{state.st_name}},{{state.st_pPl}}
+            </td>
+        </tr>
+    </tbody>
+</table>

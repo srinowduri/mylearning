@@ -1,0 +1,4 @@
+<h3>Edit your expense details:</h3>
+<app-expenses-form *ngIf="expense$ | async as expense"
+        [expenseData] ="expense" 
+        (onSubmit)="onEditExpense($event)"></app-expenses-form>

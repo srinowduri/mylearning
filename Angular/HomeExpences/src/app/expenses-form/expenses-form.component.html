@@ -1,0 +1,24 @@
+<div class="container">
+    <form [formGroup]="expensesForm" (ngSubmit)="submit()">
+        <div class="form-group">
+            <label>Date: </label>
+            <input type="text" class="form-control" formControlName="date">
+        </div>
+        <div class="form-group">
+            <label>Store: </label>
+            <input type="text" class="form-control" formControlName="store">
+        </div>
+        <div class="form-group">
+            <label>Price: </label>
+            <input type="number" class="form-control" formControlName="price">
+        </div>
+        <div class="form-group">
+            <label>Comments: </label>
+            <input type="text" class="form-control" formControlName="comments">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Submit</button>
+            <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+        </div>
+    </form>
+</div>
